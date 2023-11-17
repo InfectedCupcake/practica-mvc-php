@@ -4,7 +4,7 @@
     <!-- Menu -->
     <section class="col-12 col-sm-6 col-md-4 col-lg-3">
         <?php
-            require_once("./app/paises/common/menu/menu.php");
+        require_once("./app/paises/common/menu/menu.php");
         ?>
     </section>
 
@@ -15,8 +15,8 @@
         </div>
         <div id="button-container" class="col-12 text-center"></div>
         <div id="paises-container" class="col-12 row">
-            
+
         </div>
     </section>
 </main>
-<script src="/mvc/app/paises/por-continente/controller/por-continente.controller.js"></script>
+<script src=" /app/paises/por-continente/controller/por-continente.controller.js"></script>

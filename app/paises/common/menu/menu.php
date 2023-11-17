@@ -3,12 +3,12 @@
 <section>
     <ul class="list-group text-center">
         <li id="por-continente" class="list-group-item w-100">
-            <a href="/mvc/app-paises/por-continente" class="btn btn-outline-primary w-100">
+            <a href=" /app-paises/por-continente" class="btn btn-outline-primary w-100">
                 Por Continente
             </a>
         </li>
         <li id="por-pais" class="list-group-item w-100">
-            <a href="/mvc/app-paises/por-pais" class="btn btn-outline-primary w-100">
+            <a href=" /app-paises/por-pais" class="btn btn-outline-primary w-100">
                 Por País
             </a>
         </li>
@@ -19,4 +19,4 @@
         </li>
     </ul>
 </section>
-<script src="/mvc/app/paises/common/menu/menu.controller.js"></script>
+<script src=" /app/paises/common/menu/menu.controller.js"></script>

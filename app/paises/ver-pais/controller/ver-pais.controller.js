@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const pathname = window.location.pathname;
     const ultimaDiagonal = pathname.split('/');
-    const cca3 = ultimaDiagonal[4];
+    const cca3 = ultimaDiagonal[ultimaDiagonal.length - 1];
 
     async function requestPaisData(cca3) {
         let url = `https://restcountries.com/v3.1/alpha/${cca3}`;

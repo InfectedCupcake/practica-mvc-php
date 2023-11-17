@@ -13,7 +13,7 @@ let countries = [];
 
 let continentes = Object.keys(regiones);
 
-for (let continente of continentes){
+for (let continente of continentes) {
     let button = document.createElement('button');
     button.classList.add('btn', 'btn-outline-primary', 'm-1');
     button.innerText = continente;
@@ -25,7 +25,7 @@ for (let continente of continentes){
 function onContinenteButtonClick(continente) {
     clearPaisesContainer();
     let buttons = buttonContainer.children;
-    for (let button of buttons){
+    for (let button of buttons) {
         if (button.innerText == continente) {
             if (button.classList.contains('active')) {
                 button.classList.remove('active');
@@ -58,7 +58,7 @@ async function requestCountriesData(continente) {
 }
 
 function renderizarPaises() {
-    for (let country of countries){
+    for (let country of countries) {
         // Creando card
         let cardDiv = document.createElement('div');
         cardDiv.classList.add(
@@ -97,7 +97,7 @@ function renderizarPaises() {
         namesDiv.appendChild(h3);
 
         // Agregando la linea hr a namesDiv
-        namesDiv.appendChild( document.createElement('hr') );
+        namesDiv.appendChild(document.createElement('hr'));
 
         // Creando div para el nombre oficial
         let officialDiv = document.createElement('div');
@@ -114,7 +114,7 @@ function renderizarPaises() {
 
         // extraer el nombre nativo
         let keys = Object.keys(country.name.nativeName);
-        let key = keys[keys.length -1];
+        let key = keys[keys.length - 1];
         let nativeName = country.name.nativeName[key].official;
 
         // Creando div para el nombre nativo
@@ -193,7 +193,7 @@ function renderizarPaises() {
             'btn',
             'btn-primary'
         );
-        link.href = '/mvc/app-paises/ver-pais/' + country.cca3;
+        link.href = ' /app-paises/ver-pais/' + country.cca3;
         link.innerText = 'Ver más...';
         // Agregando link al footer
         footerCardDiv.appendChild(link);

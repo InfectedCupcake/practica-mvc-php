@@ -17,14 +17,14 @@ switch ($request_method) {
         if (!TareasRepository::getInstance()->registrarUsuario($usuario)) {
 
             $error = TareasRepository::getInstance()->getMysqli()->error;
-            header("Location: /MVC-MIO/tareas/registrarse?error=ERROR: {$error}");
-            // header("Location: /MVC-mio/tareas/registro?error=ERROR: No fue posible crear la tarea");
+            header("Location:  /tareas/registrarse?error=ERROR: {$error}");
+            // header("Location:  /tareas/registro?error=ERROR: No fue posible crear la tarea");
             break;
         } else {
-            header("Location: /MVC-MIO/tareas/login");
+            header("Location:  /tareas/login");
         }
 
     default:
-        //header("Location: /MVC-mio/tareas/mi-lista");
+        //header("Location:  /tareas/mi-lista");
         break;
 }

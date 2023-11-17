@@ -1,42 +1,40 @@
 <?php
-if (!isset($path_comp[2]))
-    $path_comp[2] = '';
+if (!isset($path_comp[1]))
+    $path_comp[1] = '';
 
-switch ($path_comp[2]) {
+switch ($path_comp[1]) {
     case '':
     case 'registrarse':
-        if (!checkSession()) 
-        require_once("./app/tareas/usuario/controller/registrarse.controller.php");
+        if (!checkSession())
+            require_once("./app/tareas/usuario/controller/registrarse.controller.php");
         else
-            header("Location: /MVC-MIO/tareas/mi-lista");  
-         break;    
+            header("Location:  /tareas/mi-lista");
+        break;
     case 'login':
-        if (!checkSession()) 
-        require_once("./app/tareas/usuario/controller/login.controller.php");
+        if (!checkSession())
+            require_once("./app/tareas/usuario/controller/login.controller.php");
         else
-            header("Location: /MVC-MIO/tareas/mi-lista");
+            header("Location:  /tareas/mi-lista");
         break;
     case 'registro':
-        if (checkSession()) 
-        require_once("./app/tareas/registro/controller/registro.controller.php");
+        if (checkSession())
+            require_once("./app/tareas/registro/controller/registro.controller.php");
         else
-        header("Location: /MVC-MIO/tareas/login");
+            header("Location:  /tareas/login");
         break;
     case 'mi-lista':
-        if (checkSession()) 
+        if (checkSession())
             require_once("./app/tareas/mi-lista/controller/mi-lista.controller.php");
         else
-            header("Location: /MVC-MIO/tareas/login");
+            header("Location:  /tareas/login");
         break;
 
     case 'logout':
-        session_destroy(); 
-        header("Location: /MVC-MIO/tareas/login");
+        session_destroy();
+        header("Location:  /tareas/login");
         break;
 
     default:
-        //header("Location: /mvc/tareas");
+        //header("Location:  /tareas");
         break;
 }
-
-?>

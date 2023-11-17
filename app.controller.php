@@ -1,6 +1,6 @@
 <?php
 
-switch ($path_comp[1]) {
+switch ($path_comp[0]) {
     case '':
         require_once('./app/registro/controller/registro.controller.php');
         break;

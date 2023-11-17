@@ -1,9 +1,9 @@
 <?php
 
-if (!isset($path_comp[2]))
-    $path_comp[2] = 'por-continente';
+if (!isset($path_comp[1]))
+    $path_comp[1] = 'por-continente';
 
-switch ($path_comp[2]) {
+switch ($path_comp[1]) {
     case 'por-continente':
         require_once("./app/paises/por-continente/view/por-continente.view.php");
         break;
@@ -17,6 +17,6 @@ switch ($path_comp[2]) {
         break;
 
     default:
-        header("Location: /mvc/app-paises/por-continente");
+        header("Location:  /app-paises/por-continente");
         break;
 }
