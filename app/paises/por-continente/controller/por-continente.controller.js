@@ -205,3 +205,6 @@ function renderizarPaises() {
 function clearPaisesContainer() {
     paisesContainer.innerHTML = '';
 }
+
+
+
